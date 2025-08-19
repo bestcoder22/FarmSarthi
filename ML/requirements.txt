@@ -1,0 +1,21 @@
+fastapi
+uvicorn
+flask
+requests
+numpy
+pandas
+Pillow
+torch
+torchvision
+scikit-learn
+tensorflow
+joblib
+jinja2
+
+# fastapi
+# uvicorn
+# torch
+# torchvision
+# Pillow
+# pandas
+# numpy
