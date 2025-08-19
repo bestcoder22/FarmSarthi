@@ -1,7 +1,5 @@
-.env
 node_modules
 __pycache__
 venv
-Data
 android
 .vscode
