@@ -3,6 +3,7 @@ uvicorn
 flask
 requests
 numpy
+opencv-python
 pandas
 Pillow
 torch

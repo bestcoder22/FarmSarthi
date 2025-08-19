@@ -1,21 +1,18 @@
-# KisanSahayak - Empowering Farmers with Smart Agriculture Solutions
+# FarmSarthi - Empowering Farmers with Smart Agriculture Solutions
 
-**KisanSahayak** is a smart, data-driven web application designed to help farmers make informed decisions. By integrating machine learning, environmental data, advanced imaging techniques, and innovative marketplace features, we aim to provide farmers with real-time insights into rainfall patterns, crop recommendations, disease management, and more.
+**FarmSarthi** is a smart, data-driven web application designed to help farmers make informed decisions. By integrating machine learning, environmental data, advanced imaging techniques, and innovative marketplace features, we aim to provide farmers with real-time insights into rainfall patterns, crop recommendations, disease management, and more.
 
 ## Table of Contents
 - [Project Overview](#project-overview)
 - [Features](#features)
 - [Technologies Used](#technologies-used)
 - [Getting Started](#getting-started)
-- [Usage](#usage)
-- [Mobile App Usage](#app-usage)
-- [Dataset Information](#dataset-information)
+- [Website Usage](#website-usage)
 - [Future Work](#future-work)
 - [Team Members](#team-members)
-- [License](#license)
 
 ## Project Overview
-KisanSahayak offers farmers a comprehensive solution for smarter agricultural practices, utilizing cutting-edge technologies such as machine learning and computer vision. Key highlights include:
+FarmSarthi offers farmers a comprehensive solution for smarter agricultural practices, utilizing cutting-edge technologies such as machine learning and computer vision. Key highlights include:
 - **Rainfall & Climate Analysis:** In-depth analysis of district-wise rainfall patterns and climate variations to help farmers plan their sowing and irrigation strategies.
 - **Crop Recommendations:** AI-based suggestions for optimal crops to grow, based on soil nutrients, temperature, and humidity.
 - **Disease Prediction & Management:** Our system predicts potential crop diseases and offers management tips, using both traditional and advanced methods like hyperspectral imaging.
@@ -25,7 +22,7 @@ KisanSahayak offers farmers a comprehensive solution for smarter agricultural pr
 - **Trusted User Marketplace:** A secure, verified platform for farmers to sell or buy products from other farmers or retailers.
 - **Disease Prediction:** The app predicts the most likely disease in a farm based on current environmental and crop conditions.
 
-KisanSahayak aims to simplify agricultural decision-making, reduce risks, and improve yields for farmers across India.
+FarmSarthi aims to simplify agricultural decision-making, reduce risks, and improve yields for farmers across India.
 
 ## Features
 - **Rainfall Analysis:** Understand actual vs. normal rainfall and deviation trends.
@@ -39,6 +36,7 @@ KisanSahayak aims to simplify agricultural decision-making, reduce risks, and im
 - **Marketplace:** A platform for farmers to trade goods with each other or retailers, ensuring fair access to resources.
 - **Most Likely Disease Prediction:** AI-powered predictions on the most probable diseases affecting the crops in a specific farm.
 - **AI-powered AR Image Assistance:** While capturing crop photos, the app will use augmented reality (AR) to guide farmers on the optimal way to take the picture for disease detection.
+- **AI Chatbot:**An intelligent AI chatbot that guides farmers with personalized crop advice, disease predictions, and easy voice-enabled support.
 
 ## Technologies Used
 - **Backend:** Node JS
@@ -52,74 +50,65 @@ KisanSahayak aims to simplify agricultural decision-making, reduce risks, and im
 To get started with the project, clone the repository and install the necessary dependencies.
 
 ```bash
-git clone https://github.com/yourusername/kisansahayak.git
-cd kisansahayak
+git clone https://github.com/bestcoder22/FarmSarthi.git
+cd FarmSarthi
 cd backend
 npm install
 cd ../frontend
 npm install
-cd ../ML
+cd ..
+py -m venv venv
+source venv/Scripts/activate
+cd ML
+pip install -r requirements.txt
+cd ../chatbot
 pip install -r requirements.txt
 ```
+Open 'Docker Desktop'
+Run below command from command prompt
+```bash
+docker run --name my-redis -p 6379:6379 -d redis:7
+```
+after this run below command to confirm docker image is running
+```bash
+docker exec -it my-redis redis-cli ping
+```
+you should see below output
+PONG
+
 
 ## Website Usage
 Once the project is set up, you can start the web application using the following command on your root directory:
 
 ```bash
-cd frontend
-npm run dev
+cd ML
+uvicorn app:app --reload
+cd ../chatbot
+python app.py
 cd ../backend
 npm start
-cd ../ML
-uvicorn app:app --reload
+cd ../frontend
+npm run dev
 ```
 
 Open your browser and navigate to `http://localhost:5173/` to use the application.
 
-## App Usage
-You can also start the mobile application using the following command on your root directory:
-
-```bash
-cd android/frontend
-npx expo start
-cd ../../backend
-npm start
-cd ../ML
-uvicorn app:app --reload
-```
-
-Download Expo Go app on your mobile device
-
-- [Download for Android (Google Play Store)](https://play.google.com/store/apps/details?id=host.exp.exponent)
-- [Download for iOS (App Store)](https://apps.apple.com/app/expo-go/id982107779)
-
-After the app has started running, a QR code will be generated in your terminal or browser. Open the Expo Go app on your mobile phone and use the built-in camera or Expo Go to scan the QR code. Once scanned, the mobile app will load directly in the Expo Go app.
-
-## Dataset Information
-Our data is sourced from reliable datasets like IMD (India Meteorological Department) and district-wise agricultural reports. The data contains key features like district names, actual rainfall, normal rainfall, percentage deviation from the norm, soil nutrients (NPK), temperature, and humidity.
 
 ## Future Work
-We are actively working on enhancing KisanSahayak by introducing:
+We are actively working on enhancing FarmSarthi by introducing:
 - **Hyperspectral Reflectance Method:** We are exploring hyperspectral imaging techniques to predict crop diseases more accurately, leveraging the reflectance properties of leaves and plants.
 - **Expanded Crop and Disease Prediction Models:** Building more robust models to predict diseases in a broader range of crops and environmental conditions.
 
-These features are in development and will be added to future versions of KisanSahayak.
+These features are in development and will be added to future versions of FarmSarthi.
 
 ## Team Members
 This project is a collaborative effort by:
-- **Sagnik Basak** (Team Leader) - Machine Learning Engineer & Data Analyst
-- **Tamojit Das** – Full Stack Development, Application System Design & Project Manager
-- **Ankan Das** – DL Model Design & Development
-- **Debeshee Sen** – Full Stack Development & UI/UX Design
-- **Titas Kabiraj** – Front End, UI/UX Design & Documentation
-- **Ritesh Das** – Android Development & Full Stack Development
+- **Shyam** (Team Leader) - back-end, front-end, database-development, full-stack-development, android-development, ui-ux, machine-learning, system-design
+- **Soham Amrutkar** – back-end, front-end, database-development, full-stack-development, machine-learning, system-design
+- **Spandan Salunkhe** – deep Learning,  model design & development, full-stack-development, genai
 
-For inquiries, feel free to contact us via [kisansahayak@gmail.com](mailto:kisansahayak@gmail.com).
+For inquiries, feel free to contact us via [FarmSarthi@gmail.com](mailto:FarmSarthi@gmail.com).
 
-## License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
-
-**Note:** This is a public repository, and we are open to contributions.
 

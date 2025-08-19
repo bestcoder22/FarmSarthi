@@ -57,17 +57,24 @@ const Navbar = () => {
   return (
     <nav>
       <div className="nav-logo-container">
-        <img src="/KisanSahayak.png" alt="logo" className="h-[30px] w-full" />
+        <img src="/FarmSarthi.png" alt="logo" className="h-[50px] w-full mt-5" />
       </div>
       <div className="navbar-links-container hidden md:flex ml-4">
         <a href="" className="relative inline-block px-3 py-2 text-black after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[3px] after:w-0 after:bg-orange-500 after:transition-all after:duration-300 hover:after:w-full hover:after:bg-orange-500 hover:text-orange-500">Welcome</a>
 
-        <a href="#testimonial-id" className="relative inline-block px-3 py-2 text-black after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[3px] after:w-0 after:bg-orange-500 after:transition-all after:duration-300 hover:after:w-full hover:after:bg-orange-500 hover:text-orange-500">Statistics</a>
+        <a href="#statistics-id" className="relative inline-block px-3 py-2 text-black after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[3px] after:w-0 after:bg-orange-500 after:transition-all after:duration-300 hover:after:w-full hover:after:bg-orange-500 hover:text-orange-500">Statistics</a>
 
         <a href="#new-activities-id" className="relative inline-block px-3 py-2 text-black after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[3px] after:w-0 after:bg-orange-500 after:transition-all after:duration-300 hover:after:w-full hover:after:bg-orange-500 hover:text-orange-500">New</a>
 
-        <a href="#contact-id" className="relative inline-block px-3 py-2 text-black after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[3px] after:w-0 after:bg-orange-500 after:transition-all after:duration-300 hover:after:w-full hover:after:bg-orange-500 hover:text-orange-500">Contact</a>
-
+        <a href="#"
+  onClick={(e) => {
+    e.preventDefault(); // prevent default anchor behavior
+    window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
+  }}
+  className="relative inline-block px-3 py-2 text-black after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[3px] after:w-0 after:bg-orange-500 after:transition-all after:duration-300 hover:after:w-full hover:after:bg-orange-500 hover:text-orange-500"
+>
+  Contact
+</a>
         <a onClick={() => navigate("/marketplace")} href="" className="hover:text-orange-500">
           <BsCart2 className="navbar-cart-icon" />
         </a>

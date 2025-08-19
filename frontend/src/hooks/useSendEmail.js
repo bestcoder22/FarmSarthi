@@ -16,7 +16,7 @@ const useSendEmail = () => {
             template_params: {
                 from_name: authUser.name,
                 from_email: mail,
-                to_name: "KisanSahayak",
+                to_name: "FarmSarthi",
                 message: message
             }
         };
