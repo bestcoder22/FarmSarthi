@@ -36,7 +36,7 @@ FarmSarthi aims to simplify agricultural decision-making, reduce risks, and impr
 - **Marketplace:** A platform for farmers to trade goods with each other or retailers, ensuring fair access to resources.
 - **Most Likely Disease Prediction:** AI-powered predictions on the most probable diseases affecting the crops in a specific farm.
 - **AI-powered AR Image Assistance:** While capturing crop photos, the app will use augmented reality (AR) to guide farmers on the optimal way to take the picture for disease detection.
-- **AI Chatbot:**An intelligent AI chatbot that guides farmers with personalized crop advice, disease predictions, and easy voice-enabled support.
+- **AI Chatbot:** An intelligent AI chatbot that guides farmers with personalized crop advice, disease predictions, and easy voice-enabled support.
 
 ## Technologies Used
 - **Backend:** Node JS
